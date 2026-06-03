@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package testservice;
+
+// A few different message shapes to exercise the protobuf decoder.
+
+message EchoRequest {
+  string message = 1;
+  int32  repeat  = 2;
+}
+
+message EchoResponse {
+  string message = 1;
+  int32  count   = 2;
+  bool   ok      = 3;
+}
+
+message Address {
+  string street  = 1;
+  string city    = 2;
+  string country = 3;
+  int32  zip     = 4;
+}
+
+message User {
+  int32   id      = 1;
+  string  name    = 2;
+  string  email   = 3;
+  Address address = 4;
+  repeated string tags = 5;
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+enum Status {
+  UNKNOWN  = 0;
+  ACTIVE   = 1;
+  INACTIVE = 2;
+}
+
+message Item {
+  int32  id     = 1;
+  string name   = 2;
+  double price  = 3;
+  Status status = 4;
+  bytes  data   = 5;
+}
+
+message ListRequest {
+  int32 limit = 1;
+}
+
+message ListResponse {
+  repeated Item items = 1;
+  int32         total = 2;
+}
+
+service TestService {
+  rpc Echo(EchoRequest)         returns (EchoResponse);
+  rpc GetUser(GetUserRequest)   returns (User);
+  rpc ListItems(ListRequest)    returns (ListResponse);
+}

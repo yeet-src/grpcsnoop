@@ -1,0 +1,7 @@
+# Generated kernel type header + compiled BPF objects
+vmlinux.h
+*.bpf.o
+
+# Python
+__pycache__/
+*.pyc

@@ -1,0 +1,26 @@
+# Two containers talking plaintext gRPC/protobuf over a user-defined bridge.
+# The bridge gives each container a veth whose host-side peer is visible in the
+# host network namespace — which is what the TCX snoop attaches to.
+services:
+  server:
+    build: .
+    image: grpcsnoop-demo
+    container_name: ps-server
+    command: ["server.py", "--host", "0.0.0.0", "--port", "50051"]
+    networks: [psnet]
+
+  client:
+    # Reuses the image built by `server` (don't build twice — concurrent builds
+    # of the same tag race on export).
+    image: grpcsnoop-demo
+    container_name: ps-client
+    # Connects to the server container by name; fresh connection each round so
+    # the packet capture always sees a full HTTP/2 stream from its preface.
+    command: ["client.py", "--host", "server", "--port", "50051",
+              "--loop", "--reconnect", "--delay", "1.0"]
+    depends_on: [server]
+    networks: [psnet]
+
+networks:
+  psnet:
+    driver: bridge
