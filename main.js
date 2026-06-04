@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0
 // grpcsnoop — watch plaintext gRPC/protobuf at the TC layer, across containers.
 // Attaches SchedCls programs via TCX (ingress + egress) and reads payloads with
 // bpf_skb_load_bytes (handles nonlinear skbs), then reassembles the TCP stream

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0
 // Output helpers. Falls back to console.log when no PTY is attached.
 
 let hasTty = false;

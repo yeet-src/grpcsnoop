@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0
 // TCP stream reassembly → HTTP/2 frame walk → gRPC message extraction.
 //
 // At the packet layer each event is one TCP segment. We rebuild the ordered
