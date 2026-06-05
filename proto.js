@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0
 // Protobuf wire-format decoder. No schema required — produces field numbers
 // and typed values. Nested messages are decoded recursively.
 
