@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/platform-Linux-1793D1" alt="Linux">
   <img src="https://img.shields.io/badge/built%20with-yeet%20%2B%20eBPF-8A2BE2" alt="yeet + eBPF">
   <img src="https://img.shields.io/badge/license-GPL--2.0-3DA639" alt="GPL-2.0">
-  <a href="https://discord.gg/dYZu9PjKB"><img src="https://img.shields.io/badge/chat-Discord-5865F2" alt="Discord"></a>
+  <a href="https://discord.gg/JxVseaAVAU"><img src="https://img.shields.io/badge/chat-Discord-5865F2" alt="Discord"></a>
 </p>
 
 ![grpcsnoop demo](assets/grpcsnoop.gif)
@@ -194,4 +194,4 @@ Needs `clang` (BPF target) and `bpftool`. The generated `vmlinux.h` and `*.bpf.o
 
 ---
 
-Built with [yeet](https://yeet.cx/docs/?utm_source=github&utm_medium=readme&utm_campaign=grpcsnoop), a JS runtime for writing eBPF programs on Linux machines. Join us on [discord](https://discord.gg/dYZu9PjKB?utm_source=github&utm_medium=readme&utm_campaign=grpcsnoop).
+Built with [yeet](https://yeet.cx/docs/?utm_source=github&utm_medium=readme&utm_campaign=grpcsnoop), a JS runtime for writing eBPF programs on Linux machines. Join us on [discord](https://discord.gg/JxVseaAVAU?utm_source=github&utm_medium=readme&utm_campaign=grpcsnoop).
