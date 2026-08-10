@@ -1,3 +1,5 @@
+<!-- yeet:user-friendly-title: Analyze gRPC traffic -->
+
 # `grpcsnoop`
 
 > **`tcpdump` for gRPC.** Watch the protobuf messages flowing between services, decoded to readable fields.
